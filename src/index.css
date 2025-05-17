@@ -45,11 +45,17 @@
   }
 }
 @keyframes meteor {
-  0% { transform: rotate(215deg) translateY(0); 
-  opacity: 1; }
-  70% { opacity: 1;}
-  100% { transform: rotate(215deg) translateY(-500px);
-  opacity: 0; }
+  0% { 
+    transform: rotate(215deg) translateX(0) translateY(0);
+    opacity: 1;
+  }
+  70% { 
+    opacity: 1;
+  }
+  100% { 
+    transform: rotate(215deg) translateX(-100px) translateY(-500px);
+    opacity: 0;
+  }
 }
 }
 
@@ -140,8 +146,23 @@ font-feature-settings: "rlig" 1, "calt" 1, ;
   box-shadow: 0 0 10px 2px rgba(167, 139, 250, 0.4);
 }
 @utility meteor {
-  @apply absolute bg-gradient-to-r from-white via-white to-transparent rounded-full;
-  box-shadow: 0 0 10px 5px rgba(255, 255, 250, 0.3);
+  @apply absolute rounded-none;
+  background: linear-gradient(90deg, 
+    rgba(255, 255, 255, 1) 0%,
+    rgba(255, 255, 255, 0.8) 20%,
+    rgba(255, 255, 255, 0.4) 40%,
+    rgba(255, 255, 255, 0.2) 60%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  filter: blur(1px);
+  box-shadow: 
+    0 0 20px 2px rgba(255, 255, 255, 0.8),
+    0 0 40px 4px rgba(255, 255, 255, 0.4),
+    0 0 60px 6px rgba(255, 255, 255, 0.2);
+  transform-origin: left center;
+  will-change: transform, opacity;
+  animation-fill-mode: both;
+  animation-play-state: running;
 }
 
 
