@@ -1,4 +1,4 @@
-import { Download, ExternalLinkIcon, GithubIcon } from "lucide-react";
+import { Download, ExternalLinkIcon, GithubIcon, ArrowRightIcon } from "lucide-react";
 
 const projects = [
 {
@@ -40,16 +40,6 @@ const projects = [
   
 
 },
-{
-    id: 5,
-    title: "web crud",
-    description: "This is a web Cashier site",
-    image: "/projects/crud.png",
-    tags: ["HTML", "CSS", "JavaScript"],
-    downloadUrl:"https://github.com/kiitaros/crud",
-    githubUrl: "#",
-
-},
 
 ]
 export const ProjectsSection = () => {
@@ -69,8 +59,8 @@ export const ProjectsSection = () => {
                                          </div>
                                                   <div className="p-6">
                                                          <div className="flex flex-wrap gap-2 mb-4">
-                                                            {project.tags.map((tag)=>(
-                                                                    <span className="px-2 py-1 text-xs font-medium border rounded-full bg-secondary text-secondary-foreground">
+                                                            {project.tags.map((tag, index)=>(
+                                                                    <span key={index} className="px-2 py-1 text-xs font-medium border rounded-full bg-secondary text-secondary-foreground">
                                                                         {tag}
                                                                     </span>
                                                             ))}
@@ -97,6 +87,11 @@ export const ProjectsSection = () => {
                                  </div>
                             ))}
                           </div>
+                                    <div className="text-center mt-12">
+                                          <a href="https://github.com/kiitaros" target="_blank" className="cosmic-button w-fit flex items-center mx-auto gap-2">
+                                             Check My Github <ArrowRightIcon size={16} />
+                                          </a>
+                                    </div>
             </div>
         </section>
     );
