@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import { useState } from "react";
 import { cn } from "../lib/utils"
 import { Menu, X } from "lucide-react";
+import { ThemeToggle } from "./ThemeToggle";
 
 const navItems = [
     {name: "Home",href:"#hero"},
@@ -33,12 +34,15 @@ export const Navbar = () => {
             <span className="text-glow text-foreground"> Ahmed </span> portfolio
         </span>   
     </a>
-        <div className="hidden md:flex space-x-8" >
-            {navItems.map((item, key) => (
-                <a key={key} href={item.href} className="text-foreground/80 hover:text-primary transition-colors duration-300 " >
-                    {item.name}
-                </a>
-            ))}
+        <div className="flex items-center gap-8">
+            <div className="hidden md:flex space-x-8">
+                {navItems.map((item, key) => (
+                    <a key={key} href={item.href} className="text-foreground/80 hover:text-primary transition-colors duration-300">
+                        {item.name}
+                    </a>
+                ))}
+            </div>
+            <ThemeToggle />
         </div>
 
         <button onClick={()=> setIsMenuOpen((prev)=> !prev )}
@@ -49,7 +53,7 @@ export const Navbar = () => {
                 {isMenuOpen ? <X size={24}/> : <Menu size={24} />} </button>
     <div
      className={cn(
-        "fixed inset-0 bg-background/95 backdroup-blur-md z-40 flex flex-col items-center justify-center",
+        "fixed inset-0 bg-background/95 backdrop-blur-md z-40 flex flex-col items-center justify-center",
         "transition-all duration-300 md:hidden",
          isMenuOpen 
          ? "opacity-100 pointer-events-auto" 
@@ -60,7 +64,7 @@ export const Navbar = () => {
             {navItems.map((item, key) => (
                 <a key={key}
                  href={item.href}
-                  className="text-foreground/80 hover:text-primary transition-colors duration-300 "
+                  className="text-foreground/80 hover:text-primary transition-colors duration-300"
                 onClick={() => setIsMenuOpen(false)}
                 >
                     {item.name}
