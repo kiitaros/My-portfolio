@@ -18,7 +18,7 @@ const projects = [
     description: "Tastify is a a brand identity",
     image: "/projects/tastify.png",
     tags: ["photoshop", "illustrator"],
-    downloadUrl:"#",
+    downloadUrl:"/projects/Tastify.pdf",
 },
 
 {
@@ -27,7 +27,7 @@ const projects = [
     description: "Verve is a a brand identity",
     image: "/projects/verve.png",
     tags: ["photoshop", "illustrator"],
-    downloadUrl:"#",
+    downloadUrl:"/projects/verve.pdf",
 },
 
 {
@@ -72,13 +72,19 @@ export const ProjectsSection = () => {
                                                                      <p className="text-muted-foreground text-sm mb-4">{project.description}</p>
                                                                          <div className="flex justify-between items-center ">
                                                                                <div className="flex space-x-3">
-
-                                                                                            <a href={project.downloadUrl} target="_blank" className="text-foreground/80 hover:text-primary transition-colors duration-300">
+                                                                                            <a href={project.downloadUrl} 
+                                                                                               target="_blank" 
+                                                                                               download={project.downloadUrl !== "#" ? project.downloadUrl.split('/').pop() : undefined}
+                                                                                               className="text-foreground/80 hover:text-primary transition-colors duration-300">
                                                                                                 <ExternalLinkIcon size={20} />
                                                                                             </a>
-                                                                                            <a href={project.downloadUrl} target="_blank" className="text-foreground/80 hover:text-primary transition-colors duration-300">
+                                                                                            <a href={project.downloadUrl} 
+                                                                                               target="_blank" 
+                                                                                               download={project.downloadUrl !== "#" ? project.downloadUrl.split('/').pop() : undefined}
+                                                                                               className="text-foreground/80 hover:text-primary transition-colors duration-300">
                                                                                                 <Download size={20} />
                                                                                             </a>
+                                                                                            
                                                                                           
                                                                                </div>
                                                                                </div>
