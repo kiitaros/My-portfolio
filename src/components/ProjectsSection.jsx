@@ -1,4 +1,5 @@
 import { Download, ExternalLinkIcon, GithubIcon, ArrowRightIcon } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const projects = [
 {
@@ -72,20 +73,19 @@ export const ProjectsSection = () => {
                                                                      <p className="text-muted-foreground text-sm mb-4">{project.description}</p>
                                                                          <div className="flex justify-between items-center ">
                                                                                <div className="flex space-x-3">
-                                                                                            <a href={project.downloadUrl} 
-                                                                                               target="_blank" 
-                                                                                               download={project.downloadUrl !== "#" ? project.downloadUrl.split('/').pop() : undefined}
+                                                                                            <Link 
+                                                                                               to={`/projects/${project.id}`}
                                                                                                className="text-foreground/80 hover:text-primary transition-colors duration-300">
                                                                                                 <ExternalLinkIcon size={20} />
-                                                                                            </a>
-                                                                                            <a href={project.downloadUrl} 
-                                                                                               target="_blank" 
-                                                                                               download={project.downloadUrl !== "#" ? project.downloadUrl.split('/').pop() : undefined}
-                                                                                               className="text-foreground/80 hover:text-primary transition-colors duration-300">
-                                                                                                <Download size={20} />
-                                                                                            </a>
-                                                                                            
-                                                                                          
+                                                                                            </Link>
+                                                                                            {project.downloadUrl !== "#" && (
+                                                                                                <a href={project.downloadUrl} 
+                                                                                                   target="_blank" 
+                                                                                                   download={project.downloadUrl.split('/').pop()}
+                                                                                                   className="text-foreground/80 hover:text-primary transition-colors duration-300">
+                                                                                                    <Download size={20} />
+                                                                                                </a>
+                                                                                            )}
                                                                                </div>
                                                                                </div>
                                                                          </div>
