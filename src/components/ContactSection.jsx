@@ -44,7 +44,7 @@ const [isSubmitting, setIsSubmitting] = useState(false);
                 <div>
                   <h4 className="font-medium">Email</h4>
                   <a href="mailto:ahmedborah1@outlook.com" className="text-muted-foreground hover:text-primary transition-colors">
-                    ahmedborah1@outlook.com
+                   ahmad8tech@gmail.com
                   </a>
                 </div>
               </div>
@@ -61,17 +61,7 @@ const [isSubmitting, setIsSubmitting] = useState(false);
                 </div>
               </div>
 
-              <div className="flex items-start space-x-4">
-                <div className="p-3 rounded-full bg-primary/10">
-                  <MapPin className="h-6 w-6 text-primary"/> 
-                </div>
-                <div>
-                  <h4 className="font-medium">Location</h4>
-                  <span className="text-muted-foreground">
-                    Egypt, Giza
-                  </span>
-                </div>
-              </div>
+           
             </div>
 
             <div className="pt-6 mt-4">

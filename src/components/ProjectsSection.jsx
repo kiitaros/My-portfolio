@@ -5,7 +5,7 @@ export const projects = [
 {
     id: 1,
     title:  "My web portfolio",
-    description: "This is my web portfolio",
+    description: "A responsive website showcasing my projects with clean design and intuitive navigation.",
     image: "/projects/protfolio.png",
     tags: ["React", "Tailwind CSS", "Framer Motion"],
     projectURL:"#hero",
@@ -16,7 +16,7 @@ export const projects = [
 {
     id: 2,
     title:  "Brand identity: Tastify",
-    description: "Tastify is a a brand identity",
+    description: "A restaurant’s visual identity, featuring logo design, color palette, and style guidelines.",
     image: "/projects/tastify.png",
     tags: ["photoshop", "illustrator"],
     projectURL:"/projects/Tastify.pdf",
@@ -25,7 +25,7 @@ export const projects = [
 {
     id: 3,
     title:  "Brand identity: Verve",
-    description: "Verve is a a brand identity",
+    description: "A coffee shop’s visual identity, featuring logo design, color palette, and style guidelines.",
     image: "/projects/verve.png",
     tags: ["photoshop", "illustrator"],
     projectURL:"/projects/verve.pdf",
@@ -34,7 +34,7 @@ export const projects = [
 {
     id: 4,
     title: "Video game",
-    description: "This is a video game",
+    description: "A passion project featuring interactive gameplay, custom graphics, and engaging sound.",
     image: "/projects/game.png",
     tags: ["Godot", "GDScript"],
     projectURL:"../web-games/index.html",

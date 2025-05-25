@@ -14,8 +14,9 @@ export const HeroSection = () => {
                         <span className="text-gradient  ml-2 opacity-0 animate-fade-in-delay-2"> Ali</span>
                     </h1>
                         <p className="text-lg md:text-xl text-muted-foreground max-2-2xl mx-auto opacity-0 animate-fade-in-delay-3" >
-                           Computer Science student with a passion for web development,
-                            game programming, video editing, and design.
+                        Computer Science student specializing in design and video editing,
+                         with strong programming skills and a flair for web development.
+                         Energetic and creative, I explore game development purely out of passion.
 
                         </p>
                                <div className="opacity-0 animate-fade-in-delay-4">

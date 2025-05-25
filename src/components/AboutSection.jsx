@@ -9,16 +9,13 @@ return (
               <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
                       <div className="space-y-6">
                          <h3 className="text-2xl font-semibold">
-                            Creative Web Developer & Video Editor,Designer
+                         Creative Designer & Video Editor, Web Developer
                          </h3>
                             <p className="text-muted-foreground">
-                                  I'm a Computer Science student who builds websites and designs videos, 
-                                turning ideas into clear,
-                                engaging experiences. I enjoy combining coding skills with creative vision to solve problems and tell stories visually.
+                            I’m a Computer Science student who focuses on design and video editing, using coding to support visual storytelling.
                             </p>
                                 <p className="text-muted-foreground"> 
-                                    Whether I'm developing a responsive site or editing footage, 
-                                    my goal is always simplicity and impact.
+                                I build clean, responsive websites and edit engaging videos with an emphasis on simplicity and impact.
                                  </p>
                                        <div className="flex flex-col md:flex-row gap-4 justify-center">
                                                  <a href="cv" className="cosmic-button">
@@ -76,7 +73,7 @@ return (
                                                 </div>
                                                       <div className="text-left">
                                                              <h4 className="font-semibold text-lg"> Game Development</h4> 
-                                                             <p className="text-muted-foreground"> Building fun games with graphics, sound, and interactive rules.
+                                                             <p className="text-muted-foreground">Passion project crafting games with graphics, sound, and interactivity.
                                                              </p>    
                                                         </div>
                                         </div>
