@@ -1,15 +1,15 @@
 import { Download, ExternalLinkIcon, GithubIcon, ArrowRightIcon } from "lucide-react";
 import { Link } from "react-router-dom";
 
-const projects = [
+export const projects = [
 {
     id: 1,
     title:  "My web portfolio",
     description: "This is my web portfolio",
     image: "/projects/protfolio.png",
     tags: ["React", "Tailwind CSS", "Framer Motion"],
-    downloadUrl:"#",
-    githubUrl: "https://github.com/kiitaros/My-portfolio",
+    projectURL:"#hero",
+    githubURL: "https://github.com/kiitaros/My-portfolio",
  
 },
 
@@ -19,7 +19,7 @@ const projects = [
     description: "Tastify is a a brand identity",
     image: "/projects/tastify.png",
     tags: ["photoshop", "illustrator"],
-    downloadUrl:"/projects/Tastify.pdf",
+    projectURL:"/projects/Tastify.pdf",
 },
 
 {
@@ -28,7 +28,7 @@ const projects = [
     description: "Verve is a a brand identity",
     image: "/projects/verve.png",
     tags: ["photoshop", "illustrator"],
-    downloadUrl:"/projects/verve.pdf",
+    projectURL:"/projects/verve.pdf",
 },
 
 {
@@ -37,7 +37,7 @@ const projects = [
     description: "This is a video game",
     image: "/projects/game.png",
     tags: ["Godot", "GDScript"],
-    downloadUrl:"#",
+    projectURL:"../web-games/index.html",
   
 
 },
@@ -78,10 +78,10 @@ export const ProjectsSection = () => {
                                                                                                className="text-foreground/80 hover:text-primary transition-colors duration-300">
                                                                                                 <ExternalLinkIcon size={20} />
                                                                                             </Link>
-                                                                                            {project.downloadUrl !== "#" && (
-                                                                                                <a href={project.downloadUrl} 
+                                                                                            {project.projectURL !== "#" && (
+                                                                                                <a href={project.projectURL} 
                                                                                                    target="_blank" 
-                                                                                                   download={project.downloadUrl.split('/').pop()}
+                                                                                                   download={project.projectURL.split('/').pop()}
                                                                                                    className="text-foreground/80 hover:text-primary transition-colors duration-300">
                                                                                                     <Download size={20} />
                                                                                                 </a>
