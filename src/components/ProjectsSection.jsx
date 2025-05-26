@@ -1,5 +1,12 @@
 import { Download, ExternalLinkIcon, GithubIcon, ArrowRightIcon } from "lucide-react";
 import { Link } from "react-router-dom";
+import {useState, useEffect} from "react";
+
+const isDownloadableFile = (url) => {
+    if (!url || url === "#") return false;
+    const downloadableExtensions = ['.pdf', '.jpg', '.jpeg', '.png', '.doc', '.docx', '.zip'];
+    return downloadableExtensions.some(ext => url.toLowerCase().endsWith(ext));
+};
 
 export const projects = [
 {
@@ -16,7 +23,7 @@ export const projects = [
 {
     id: 2,
     title:  "Brand identity: Tastify",
-    description: "A restaurant’s visual identity, featuring logo design, color palette, and style guidelines.",
+    description: "A restaurant's visual identity, featuring logo design, color palette, and style guidelines.",
     image: "/projects/tastify.png",
     tags: ["photoshop", "illustrator"],
     projectURL:"/projects/Tastify.pdf",
@@ -25,7 +32,7 @@ export const projects = [
 {
     id: 3,
     title:  "Brand identity: Verve",
-    description: "A coffee shop’s visual identity, featuring logo design, color palette, and style guidelines.",
+    description: "A coffee shop's visual identity, featuring logo design, color palette, and style guidelines.",
     image: "/projects/verve.png",
     tags: ["photoshop", "illustrator"],
     projectURL:"/projects/verve.pdf",
@@ -44,6 +51,21 @@ export const projects = [
 
 ]
 export const ProjectsSection = () => {
+    const [loadedProjects, setLoadedProjects] = useState({});
+
+    useEffect(() => {
+     
+        projects.forEach(project => {
+            const img = new Image();
+            img.src = project.image;
+            img.onload = () => {
+                setLoadedProjects(prev => ({
+                    ...prev,
+                    [project.id]: true
+                }));
+            };
+        });
+    }, []);
     return(
         <section id="projects" className="py-24 px-4 relative">
             <div className="container mx-auto max-w-w5xl">
@@ -73,12 +95,14 @@ export const ProjectsSection = () => {
                                                                      <p className="text-muted-foreground text-sm mb-4">{project.description}</p>
                                                                          <div className="flex justify-between items-center ">
                                                                                <div className="flex space-x-3">
-                                                                                            <Link 
-                                                                                               to={`/projects/${project.id}`}
+                                                                                            <a 
+                                                                                               href={project.projectURL}
+                                                                                               target="_blank"
+                                                                                               rel="noopener noreferrer"
                                                                                                className="text-foreground/80 hover:text-primary transition-colors duration-300">
                                                                                                 <ExternalLinkIcon size={20} />
-                                                                                            </Link>
-                                                                                            {project.projectURL !== "#" && (
+                                                                                            </a>
+                                                                                            {isDownloadableFile(project.projectURL) && loadedProjects[project.id] && (
                                                                                                 <a href={project.projectURL} 
                                                                                                    target="_blank" 
                                                                                                    download={project.projectURL.split('/').pop()}
