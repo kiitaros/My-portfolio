@@ -18,10 +18,10 @@ return (
                                 I build clean, responsive websites and edit engaging videos with an emphasis on simplicity and impact.
                                  </p>
                                        <div className="flex flex-col md:flex-row gap-4 justify-center">
-                                                 <a href="cv" className="cosmic-button">
+                                                 <a href="cv" target="_blank" className="cosmic-button">
                                                     Get In Touch
                                                  </a>
-                                                     <a href="cv" className="px-6 py-2 rounded-full border text-primary border-primary hover:bg-primary/10 transition-colors duration-300">
+                                                     <a href="cv" target="_blank" className="px-6 py-2 rounded-full border text-primary border-primary hover:bg-primary/10 transition-colors duration-300">
                                                         Download CV
                                                      </a>
                                        </div>
