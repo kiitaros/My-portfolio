@@ -5,31 +5,35 @@ import { cn } from '@/lib/utils';
 export const ThemeToggle = () => {
     const [isDarkMode, setIsDarkMode] = useState(true);
 
-    useEffect(() => { 
-
-        const storedTheme = localStorage.getItem("theme")
-        if (storedTheme) {
-            if (storedTheme === "dark") {
-                document.documentElement.classList.add("dark"); 
-                setIsDarkMode(true);
-            } else {
-             
-              setIsDarkMode(false);
-            }
-        }
-      
-      }, []);
-    const toggleTheme = () => {
-        if (isDarkMode) {
-          document.documentElement.classList.remove("dark"); 
-         
-          setIsDarkMode(false);
-        } else {
+    useEffect(() => {
+      const storedTheme = localStorage.getItem("theme");
+    
+      if (storedTheme) {
+        if (storedTheme === "dark") {
           document.documentElement.classList.add("dark");
-          localStorage.setItem("theme", "dark"); 
           setIsDarkMode(true);
+        } else {
+          document.documentElement.classList.remove("dark");
+          setIsDarkMode(false);
         }
-      };
+      } else {
+        document.documentElement.classList.add("dark");
+        localStorage.setItem("theme", "dark");
+        setIsDarkMode(true);
+      }
+    }, []);
+    const toggleTheme = () => {
+      if (isDarkMode) {
+        document.documentElement.classList.remove("dark");
+        localStorage.setItem("theme", "light");
+        setIsDarkMode(false);
+      } else {
+        document.documentElement.classList.add("dark");
+        localStorage.setItem("theme", "dark");
+        setIsDarkMode(true);
+      }
+    };
+    
 
     return(
 <button onClick={toggleTheme} className={cn(
