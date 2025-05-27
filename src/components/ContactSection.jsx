@@ -92,10 +92,10 @@ const handleSubmit = async (e) => {
                 <a href="#" className="p-2 rounded-full bg-primary/10 hover:bg-primary/20 transition-colors">
                   <Linkedin />
                 </a>
-                <a href="https://x.com/kiita1_" target="_blank" className="p-2 rounded-full bg-primary/10 hover:bg-primary/20 transition-colors">
+                <a href="https://x.com/ahmad8tech" target="_blank" className="p-2 rounded-full bg-primary/10 hover:bg-primary/20 transition-colors">
                   <Twitter />
                 </a>
-                <a href="https://www.instagram.com/kiita1_/?next=%2F" target="_blank" className="p-2 rounded-full bg-primary/10 hover:bg-primary/20 transition-colors">
+                <a href="https://www.instagram.com/ahmad8tech/?hl=ar" target="_blank" className="p-2 rounded-full bg-primary/10 hover:bg-primary/20 transition-colors">
                   <Instagram />
                 </a>
               </div>

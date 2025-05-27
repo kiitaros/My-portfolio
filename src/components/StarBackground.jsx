@@ -1,31 +1,48 @@
 import { useEffect, useState } from "react"
-
+import { cn } from "../lib/utils"
 
 export const StarBackground = () => {  
 const [stars, setStars] = useState([]);
 const [meteors,setMeteors ] = useState([]);
+const [isDarkMode, setIsDarkMode] = useState(false);
 
 useEffect(() => {
+    const checkDarkMode = () => {
+        setIsDarkMode(document.documentElement.classList.contains('dark'));
+    };
 
-    generateStars();
-    generateMeteors();
-    
-   
-    const interval = setInterval(() => {
-        generateMeteors();
-    }, 3000); 
+    // Initial check
+    checkDarkMode();
 
-    const handleResize = () => {
+    // Set up observer for dark mode changes
+    const observer = new MutationObserver(checkDarkMode);
+    observer.observe(document.documentElement, { attributes: true, attributeFilter: ['class'] });
+
+    if (isDarkMode) {
         generateStars();
         generateMeteors();
-    };
-    
-    window.addEventListener("resize", handleResize);
+        
+        const interval = setInterval(() => {
+            generateMeteors();
+        }, 3000); 
+
+        const handleResize = () => {
+            generateStars();
+            generateMeteors();
+        };
+        
+        window.addEventListener("resize", handleResize);
+        return () => {
+            window.removeEventListener("resize", handleResize);
+            clearInterval(interval);
+            observer.disconnect();
+        };
+    }
+
     return () => {
-        window.removeEventListener("resize", handleResize);
-        clearInterval(interval);
+        observer.disconnect();
     };
-}, []);
+}, [isDarkMode]);
 
 const generateStars = () => {
     const numberOfStars = Math.floor((window.innerWidth * window.innerHeight) / 10000
@@ -62,7 +79,10 @@ const generateMeteors = () => {
     setMeteors(newMeteors);
 };
 
- return ( <div className="fixed inset-0 overflow-hidden pointer-events-none z-0">
+ return ( <div className={cn(
+    "fixed inset-0 overflow-hidden pointer-events-none z-0",
+    !isDarkMode && "hidden"
+)}>
     {stars.map((star)=> (
         <div key={star.id} className="star animate-pulse-subtle" style={{
             width: star.size + "px",
