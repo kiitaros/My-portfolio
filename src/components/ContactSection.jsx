@@ -53,42 +53,16 @@ const handleSubmit = async (e) => {
           I'm always open to new ideas and opportunities.
         </p>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="flex flex-col-reverse max-w-xl m-auto gap-8">
           {/* Contact Information - Left Column */}
           <div className="space-y-6">
             <h3 className="text-2xl font-semibold mb-6">Contact Information</h3>
-            
-            <div className="space-y-6">
-              <div className="flex items-start space-x-4">
-                <div className="p-3 rounded-full bg-primary/10">
-                  <Mail className="h-6 w-6 text-primary"/> 
-                </div>
-                <div>
-                  <h4 className="font-medium">Email</h4>
-                  <a href="mailto:ahmedborah1@outlook.com" className="text-muted-foreground hover:text-primary transition-colors">
-                   ahmad8tech@gmail.com
-                  </a>
-                </div>
-              </div>
 
-              <div className="flex items-start space-x-4">
-                <div className="p-3 rounded-full bg-primary/10">
-                  <Phone className="h-6 w-6 text-primary"/> 
-                </div>
-                <div>
-                  <h4 className="font-medium">Phone</h4>
-                  <a href="tel:+201555099084" className="text-muted-foreground hover:text-primary transition-colors">
-                    +20 155 509 9084
-                  </a>
-                </div>
-              </div>
-
-           
-            </div>
-
-            <div className="pt-6 mt-4">
-              <h4 className="font-medium mb-4 text-center">Connect with Me</h4>
+            <div className="pt-2 mt-4">
               <div className="flex space-x-4 justify-center">
+                <a   href="mailto:ahmad8tech@gmail.com" target="_blank" className="p-2 rounded-full bg-primary/10 hover:bg-primary/20 transition-colors">
+                  <Mail />
+                </a>
                 <a href="#" className="p-2 rounded-full bg-primary/10 hover:bg-primary/20 transition-colors">
                   <Linkedin />
                 </a>
@@ -103,9 +77,9 @@ const handleSubmit = async (e) => {
           </div>
 
           {/* Contact Form - Right Column */}
-          <div className="bg-card p-8 rounded-lg shadow-xs">
+          <div className="bg-card p-8 rounded-lg shadow-xs ">
             <h3 className="text-2xl font-semibold mb-6">Send a Message</h3>
-            <form className="space-y-6"
+            <form className="space-y-6 text-left"
             action="https://formspree.io/f/mrbqngyg"
             method="POST"
             onSubmit={handleSubmit}
@@ -113,14 +87,14 @@ const handleSubmit = async (e) => {
                  <input type="text" name="_gotcha" style={{ display: "none" }} />
                  <input type="hidden" name="_replyto" value="" />
               <div>
-                <label htmlFor="name" className="block text-sm font-medium mb-2">Your Name</label>
+                <label htmlFor="name" className="block text-sm font-medium mb-2">Your name</label>
                 <input 
                   type="text" 
                   id="name" 
                   name="name" 
                   required 
                   className="w-full px-4 py-3 rounded-md border border-input bg-background focus:outline-none focus:ring-2 focus:ring-primary"
-                  placeholder="Ahmed Ali..."
+                  placeholder="Your Name..."
                 />
               </div>
               
