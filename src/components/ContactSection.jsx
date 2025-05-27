@@ -149,7 +149,8 @@ const handleSubmit = async (e) => {
               </div>
               
               <button 
-                type={isSubmitting}
+                type="submit" 
+                disabled={isSubmitting}
                 className={cn(
                     "cosmic-button w-full flex items-center justify-center gap-2"
                      
