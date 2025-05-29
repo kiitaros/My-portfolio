@@ -12,16 +12,16 @@ return (
                          Creative Designer & Video Editor, Web Developer
                          </h3>
                             <p className="text-muted-foreground">
-                            I’m a Computer Science student who focuses on design and video editing, using coding to support visual storytelling.
+                            I'm a Computer Science student who focuses on design and video editing, using coding to support visual storytelling.
                             </p>
                                 <p className="text-muted-foreground"> 
                                 I build clean, responsive websites and edit engaging videos with an emphasis on simplicity and impact.
                                  </p>
                                        <div className="flex flex-col md:flex-row gap-4 justify-center">
-                                                 <a href="cv" target="_blank" className="cosmic-button">
+                                                 <a href="public/projects/CV-for-web.pdf" rel="noopener noreferrer" target="_blank" className="cosmic-button">
                                                     Get In Touch
                                                  </a>
-                                                     <a href="cv" target="_blank" className="px-6 py-2 rounded-full border text-primary border-primary hover:bg-primary/10 transition-colors duration-300">
+                                                     <a href="public/projects/CV-for-web.pdf" download="CV-for-web.pdf" className="px-6 py-2 rounded-full border text-primary border-primary hover:bg-primary/10 transition-colors duration-300">
                                                         Download CV
                                                      </a>
                                        </div>
