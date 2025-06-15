@@ -88,7 +88,14 @@ export const ProjectsSection = () => {
                             {projects.map((project, key) =>(
                                 <div key={key} className="group bg-card rounded-lg overflow-hidden shadow-xs card-hover">
                                          <div className="h-48 overflow-hidden">
-                                             <img src={project.image} alt={project.title} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
+                                             <a 
+                                                href={project.projectURL}
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                                className="block w-full h-full"
+                                             >
+                                                <img src={project.image} alt={project.title} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
+                                             </a>
                                          </div>
                                                   <div className="p-6">
                                                          <div className="flex flex-wrap gap-2 mb-4">
