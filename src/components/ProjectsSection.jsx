@@ -48,6 +48,16 @@ export const projects = [
   
 
 },
+{
+    id: 5,
+    title: "Game Hub",
+    description: "A minimalist platform that aggregates video games and their Metacritic scores, offering sortable filters and an intuitive layout for quick comparison and discovery.",
+    image: "/projects/game-hub.png",
+    tags: ["React", "Typescript", "Chakra UI"],
+    projectURL:"https://game-hub-lac-five.vercel.app/",
+  
+
+},
 
 ]
 export const ProjectsSection = () => {
