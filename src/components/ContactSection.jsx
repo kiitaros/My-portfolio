@@ -1,4 +1,5 @@
 import { Mail, MapPin, Phone, Linkedin, Twitter, Instagram, MessageSquare, Send } from "lucide-react";
+import { FaBehance } from 'react-icons/fa';
 import { cn } from "@/lib/utils";
 import { useToast } from "@/hooks/use-toast";
 import { useState } from "react";
@@ -63,7 +64,7 @@ const handleSubmit = async (e) => {
                 <a   href="mailto:ahmad8tech@gmail.com" target="_blank" className="p-2 rounded-full bg-primary/10 hover:bg-primary/20 transition-colors">
                   <Mail />
                 </a>
-                <a href="#" className="p-2 rounded-full bg-primary/10 hover:bg-primary/20 transition-colors">
+                <a href="https://www.linkedin.com/in/ahmed-ali-bb6929368/" target="_blank" className="p-2 rounded-full bg-primary/10 hover:bg-primary/20 transition-colors">
                   <Linkedin />
                 </a>
                 <a href="https://x.com/ahmad8tech" target="_blank" className="p-2 rounded-full bg-primary/10 hover:bg-primary/20 transition-colors">
@@ -71,6 +72,9 @@ const handleSubmit = async (e) => {
                 </a>
                 <a href="https://www.instagram.com/ahmad8tech/?hl=ar" target="_blank" className="p-2 rounded-full bg-primary/10 hover:bg-primary/20 transition-colors">
                   <Instagram />
+                </a>
+                <a href="https://www.behance.net/Ahmed--Designer" target="_blank" className="p-2 rounded-full bg-primary/10 hover:bg-primary/20 transition-colors">
+                  <FaBehance size={24}  />
                 </a>
               </div>
             </div> 

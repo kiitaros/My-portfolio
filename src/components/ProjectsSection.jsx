@@ -26,7 +26,7 @@ export const projects = [
     description: "A restaurant's visual identity, featuring logo design, color palette, and style guidelines.",
     image: "/projects/tastify.png",
     tags: ["photoshop", "illustrator"],
-    projectURL:"/projects/Tastify.pdf",
+    projectURL:"https://www.behance.net/gallery/227117807/Tastify-Brand-identity",
 },
 
 {
@@ -35,7 +35,7 @@ export const projects = [
     description: "A coffee shop's visual identity, featuring logo design, color palette, and style guidelines.",
     image: "/projects/verve.png",
     tags: ["photoshop", "illustrator"],
-    projectURL:"/projects/verve.pdf",
+    projectURL:"https://www.behance.net/gallery/227113123/Verve-Brand-Identity",
 },
 
 {
