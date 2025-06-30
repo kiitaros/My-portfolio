@@ -22,34 +22,18 @@ export const projects = [
 
 {
     id: 2,
-    title:  "Brand identity: Tastify",
-    description: "A restaurant's visual identity, featuring logo design, color palette, and style guidelines.",
-    image: "/projects/tastify.png",
-    tags: ["photoshop", "illustrator"],
-    projectURL:"https://www.behance.net/gallery/227117807/Tastify-Brand-identity",
+    title:  "My Personal Design Portfolio",
+    description: "Showcasing my branding, social media graphics, posters & web designs.",
+    image: "/projects/protfolio-behance.jpg",
+    tags: ["illustrator", "photoshop", "figma"],
+    projectURL:"https://www.behance.net/gallery/229324529/Ahmed-Graphic-UIUX-Portfolio",
+   
+ 
 },
+
 
 {
     id: 3,
-    title:  "Brand identity: Verve",
-    description: "A coffee shop's visual identity, featuring logo design, color palette, and style guidelines.",
-    image: "/projects/verve.png",
-    tags: ["photoshop", "illustrator"],
-    projectURL:"https://www.behance.net/gallery/227113123/Verve-Brand-Identity",
-},
-
-{
-    id: 4,
-    title: "Video game",
-    description: "A passion project featuring interactive gameplay, custom graphics, and engaging sound.",
-    image: "/projects/game.png",
-    tags: ["Godot", "GDScript"],
-    projectURL:"../web-games/index.html",
-  
-
-},
-{
-    id: 5,
     title: "Game Hub",
     description: "A minimalist platform that aggregates video games and their Metacritic scores, offering sortable filters and an intuitive layout for quick comparison and discovery.",
     image: "/projects/game-hub.png",
@@ -58,6 +42,36 @@ export const projects = [
   
 
 },
+{
+    id: 4,
+    title:  "Brand identity: Tastify",
+    description: "A restaurant's visual identity, featuring logo design, color palette, and style guidelines.",
+    image: "/projects/tastify.png",
+    tags: ["photoshop", "illustrator"],
+    projectURL:"https://www.behance.net/gallery/227117807/Tastify-Brand-identity",
+},
+{
+    id: 5,
+    title:  "Brand identity: Verve",
+    description: "A coffee shop's visual identity, featuring logo design, color palette, and style guidelines.",
+    image: "/projects/verve.png",
+    tags: ["photoshop", "illustrator"],
+    projectURL:"https://www.behance.net/gallery/227113123/Verve-Brand-Identity",
+},
+
+{
+    id: 6,
+    title: "Video game",
+    description: "A passion project featuring interactive gameplay, custom graphics, and engaging sound.",
+    image: "/projects/game.png",
+    tags: ["Godot", "GDScript"],
+    projectURL:"../web-games/index.html",
+  
+
+},
+
+
+
 
 ]
 export const ProjectsSection = () => {
