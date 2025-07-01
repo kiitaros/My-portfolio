@@ -59,16 +59,7 @@ export const projects = [
     projectURL:"https://www.behance.net/gallery/227113123/Verve-Brand-Identity",
 },
 
-{
-    id: 6,
-    title: "Video game",
-    description: "A passion project featuring interactive gameplay, custom graphics, and engaging sound.",
-    image: "/projects/game.png",
-    tags: ["Godot", "GDScript"],
-    projectURL:"../web-games/index.html",
-  
 
-},
 
 
 
